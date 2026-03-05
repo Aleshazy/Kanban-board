@@ -1,0 +1,26 @@
+body{
+    font-family: Arial; /* шрифт текста */
+    background:#f4f4f4; /* цвет фона страницы */
+  }
+  
+  .board{
+    display:flex; /* располагает колонки рядом */
+    gap:20px; /* расстояние между колонками */
+    padding:20px; /* внутренний отступ */
+  }
+  
+  .column{
+    background:white; /* цвет колонки */
+    width:300px; /* ширина */
+    min-height:400px; /* минимальная высота */
+    padding:10px; /* внутренний отступ */
+    border-radius:10px; /* скругление углов */
+  }
+  
+  .card{
+    background:#e3e3e3; /* цвет карточки */
+    padding:10px; /* внутренний отступ */
+    margin-top:10px; /* расстояние сверху */
+    border-radius:6px; /* скругление */
+    cursor:grab; /* курсор при наведении */
+  }

@@ -1,0 +1,51 @@
+<!DOCTYPE html> <!-- говорим браузеру что используем современный HTML -->
+
+<html> <!-- начало HTML документа -->
+
+<head> <!-- служебная часть страницы -->
+
+  <meta charset="UTF-8"> <!-- кодировка текста чтобы работали все символы -->
+
+  <title>Kanban Board</title> <!-- название вкладки браузера -->
+
+  <link rel="stylesheet" href="style.css"> 
+  <!-- подключаем файл со стилями -->
+
+</head>
+
+<body> <!-- всё что внутри body отображается на странице -->
+
+<h1>My Kanban Board</h1> <!-- главный заголовок -->
+
+<div class="board"> 
+<!-- контейнер всей доски -->
+
+  <div class="column" id="todo">
+  <!-- колонка задач "сделать" -->
+
+    <h2>To Do</h2> <!-- заголовок колонки -->
+
+  </div>
+
+  <div class="column" id="progress">
+  <!-- колонка задач "в процессе" -->
+
+    <h2>In Progress</h2>
+
+  </div>
+
+  <div class="column" id="done">
+  <!-- колонка завершённых задач -->
+
+    <h2>Done</h2>
+
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+<!-- подключаем JavaScript файл -->
+
+</body>
+
+</html> <!-- конец HTML -->
