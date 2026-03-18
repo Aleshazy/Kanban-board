@@ -1,51 +1,37 @@
-<!DOCTYPE html> <!-- говорим браузеру что используем современный HTML -->
-
-<html> <!-- начало HTML документа -->
-
-<head> <!-- служебная часть страницы -->
-
-  <meta charset="UTF-8"> <!-- кодировка текста чтобы работали все символы -->
-
-  <title>Kanban Board</title> <!-- название вкладки браузера -->
-
-  <link rel="stylesheet" href="style.css"> 
-  <!-- подключаем файл со стилями -->
-
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Kanban Board</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
-<body> <!-- всё что внутри body отображается на странице -->
-
-<h1>My Kanban Board</h1> <!-- главный заголовок -->
-
-<div class="board"> 
-<!-- контейнер всей доски -->
-
-  <div class="column" id="todo">
-  <!-- колонка задач "сделать" -->
-
-    <h2>To Do</h2> <!-- заголовок колонки -->
-
+<body>
+  <h1>Kanban Board</h1>
+  <button id="loginBtn">Login</button>
+  <button id="registerBtn">Register</button>
+  <br><br>
+  <input type="text" id="taskInput" placeholder="New task">
+  <button id="addTaskBtn">Add</button>
+  <br><br>
+  <button id="selectAllBtn">Select All</button>
+  <button id="selectUncompletedBtn">Select Uncompleted</button>
+  <select id="statusSelect">
+    <option value="todo">To Do</option>
+    <option value="progress">In Progress</option>
+    <option value="done">Done</option>
+  </select>
+  <button id="changeStatusBtn">Change Status</button>
+  <div class="board">
+    <div class="column" id="todo">
+      <h2>To Do</h2>
+    </div>
+    <div class="column" id="progress">
+      <h2>In Progress</h2>
+    </div>
+    <div class="column" id="done">
+      <h2>Done</h2>
+    </div>
   </div>
-
-  <div class="column" id="progress">
-  <!-- колонка задач "в процессе" -->
-
-    <h2>In Progress</h2>
-
-  </div>
-
-  <div class="column" id="done">
-  <!-- колонка завершённых задач -->
-
-    <h2>Done</h2>
-
-  </div>
-
-</div>
-
-<script src="script.js"></script>
-<!-- подключаем JavaScript файл -->
-
+  <script src="script.js"></script>
 </body>
-
-</html> <!-- конец HTML -->
+</html>
