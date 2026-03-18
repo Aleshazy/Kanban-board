@@ -1,26 +1,50 @@
-body{
-    font-family: Arial; /* шрифт текста */
-    background:#f4f4f4; /* цвет фона страницы */
-  }
-  
-  .board{
-    display:flex; /* располагает колонки рядом */
-    gap:20px; /* расстояние между колонками */
-    padding:20px; /* внутренний отступ */
-  }
-  
-  .column{
-    background:white; /* цвет колонки */
-    width:300px; /* ширина */
-    min-height:400px; /* минимальная высота */
-    padding:10px; /* внутренний отступ */
-    border-radius:10px; /* скругление углов */
-  }
-  
-  .card{
-    background:#e3e3e3; /* цвет карточки */
-    padding:10px; /* внутренний отступ */
-    margin-top:10px; /* расстояние сверху */
-    border-radius:6px; /* скругление */
-    cursor:grab; /* курсор при наведении */
-  }
+body {
+  font-family: Arial;
+  background: #f4f4f4;
+}
+
+.board {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+.column {
+  background: white;
+  width: 300px;
+  min-height: 400px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.card {
+  background: #e3e3e3;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 6px;
+  cursor: grab;
+  position: relative;
+}
+
+.card.selected {
+  background: #d0e0ff;
+  border: 2px solid #007bff;
+}
+
+.card .delete-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.card .delete-btn:hover {
+  background: #c82333;
+}
