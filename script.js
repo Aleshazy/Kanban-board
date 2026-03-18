@@ -1,81 +1,69 @@
-// получаем колонку ToDo по id
 const todo = document.getElementById("todo")
-
-// получаем колонку In Progress
 const progress = document.getElementById("progress")
-
-// получаем колонку Done
 const done = document.getElementById("done")
-
-// переменная для хранения карточки которую мы перетаскиваем
 let draggedCard = null
 
-
-// функция создания задачи
-function createTask(text, column){
-
-  // создаём новый HTML элемент div
+function createTask(text, column) {
   const card = document.createElement("div")
-
-  // добавляем текст задачи
   card.innerText = text
-
-  // добавляем CSS класс card
   card.classList.add("card")
-
-  // разрешаем перетаскивание
   card.draggable = true
 
+  const deleteBtn = document.createElement("button")
+  deleteBtn.innerText = "×"
+  deleteBtn.classList.add("delete-btn")
+  deleteBtn.onclick = (e) => {
+    e.stopPropagation()
+    card.remove()
+  }
+  card.appendChild(deleteBtn)
 
-  // событие когда начинаем тянуть карточку
-  card.addEventListener("dragstart", function(){
+  card.onclick = () => card.classList.toggle("selected")
 
-    // сохраняем карточку которую перетаскиваем
-    draggedCard = card
-
-  })
-
-
-  // добавляем карточку в колонку
+  card.addEventListener("dragstart", () => draggedCard = card)
   column.appendChild(card)
-
 }
 
+createTask("Create login page", todo)
+createTask("Design homepage", progress)
+createTask("Deploy website", done)
 
-// создаём задачи
-
-createTask("Create login page", todo) 
-// создаём карточку и кладём в колонку todo
-
-createTask("Design homepage", progress) 
-// задача сразу в колонке progress
-
-createTask("Deploy website", done) 
-// задача сразу в колонке done
-
-
-
-// получаем все колонки
-const columns = document.querySelectorAll(".column")
-
-// перебираем каждую колонку
-columns.forEach(function(column){
-
-  // событие когда карточка находится над колонкой
-  column.addEventListener("dragover", function(event){
-
-    event.preventDefault() 
-    // разрешаем бросить карточку
-
-  })
-
-
-  // событие когда карточку отпускают
-  column.addEventListener("drop", function(){
-
-    // добавляем перетаскиваемую карточку в колонку
-    column.appendChild(draggedCard)
-
-  })
-
+document.querySelectorAll(".column").forEach(column => {
+  column.addEventListener("dragover", e => e.preventDefault())
+  column.addEventListener("drop", () => column.appendChild(draggedCard))
 })
+
+document.getElementById("loginBtn").onclick = () => alert("Login clicked")
+document.getElementById("registerBtn").onclick = () => alert("Register clicked")
+
+document.getElementById("addTaskBtn").onclick = () => {
+  const text = document.getElementById("taskInput").value.trim()
+  if (text) {
+    createTask(text, todo)
+    document.getElementById("taskInput").value = ""
+  }
+}
+
+document.getElementById("selectAllBtn").onclick = () => {
+  document.querySelectorAll(".card").forEach(card => card.classList.add("selected"))
+}
+
+document.getElementById("selectUncompletedBtn").onclick = () => {
+  document.querySelectorAll(".card").forEach(card => {
+    if (card.closest("#done")) {
+      card.classList.remove("selected")
+    } else {
+      card.classList.add("selected")
+    }
+  })
+}
+
+document.getElementById("changeStatusBtn").onclick = () => {
+  const selectedCards = document.querySelectorAll(".card.selected")
+  const newStatus = document.getElementById("statusSelect").value
+  const targetColumn = document.getElementById(newStatus)
+  selectedCards.forEach(card => {
+    card.classList.remove("selected")
+    targetColumn.appendChild(card)
+  })
+}
