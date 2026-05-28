@@ -1,0 +1,93 @@
+<svg viewBox="0 0 1200 820" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, sans-serif" role="img">
+  <title>Flow Board — Kanban макет</title>
+
+  <!-- Background -->
+  <rect width="1200" height="820" fill="#F4F4F4"/>
+
+  <!-- TOPBAR -->
+  <rect x="0" y="0" width="1200" height="60" fill="#FFFFFF"/>
+  <text x="32" y="38" font-size="22" font-weight="700" fill="#172033">Flow Board</text>
+  <rect x="1074" y="16" width="52" height="28" rx="8" fill="none" stroke="#D0D5DD" stroke-width="1"/>
+  <text x="1100" y="34" font-size="13" fill="#444" text-anchor="middle">Login</text>
+  <rect x="1136" y="16" width="56" height="28" rx="8" fill="none" stroke="#D0D5DD" stroke-width="1"/>
+  <text x="1164" y="34" font-size="13" fill="#444" text-anchor="middle">Register</text>
+
+  <!-- HERO BLOCK -->
+  <rect x="32" y="76" width="1136" height="120" rx="20" fill="#FFFFFF"/>
+  <text x="56" y="117" font-size="24" font-weight="700" fill="#172033">Kanban board for focused shipping</text>
+  <text x="56" y="143" font-size="13" fill="#536075">A cleaner concept: task input, selection controls, status changes and a three-column board.</text>
+
+  <!-- hero right: input + button -->
+  <rect x="660" y="89" width="460" height="38" rx="10" fill="#F3F6FA" stroke="#E0E6F0" stroke-width="1"/>
+  <text x="676" y="113" font-size="13" fill="#9aabbd">New task…</text>
+  <rect x="1132" y="89" width="24" height="38" rx="10" fill="#FF8A3D"/>
+  <text x="1144" y="113" font-size="13" font-weight="700" fill="#fff" text-anchor="middle">+</text>
+
+  <!-- pills row -->
+  <rect x="660" y="140" width="108" height="34" rx="17" fill="#EFF4FF" stroke="#CFE2FF" stroke-width="1"/>
+  <text x="714" y="161" font-size="12" fill="#3157A5" text-anchor="middle">Select all</text>
+  <rect x="778" y="140" width="108" height="34" rx="17" fill="#EFF4FF" stroke="#CFE2FF" stroke-width="1"/>
+  <text x="832" y="161" font-size="12" fill="#3157A5" text-anchor="middle">Uncompleted</text>
+  <rect x="896" y="140" width="140" height="34" rx="12" fill="#F3F6FA" stroke="#E0E6F0" stroke-width="1"/>
+  <text x="966" y="161" font-size="12" fill="#536075" text-anchor="middle">To Do ▾</text>
+  <rect x="1046" y="140" width="62" height="34" rx="12" fill="#172033"/>
+  <text x="1077" y="161" font-size="12" font-weight="700" fill="#fff" text-anchor="middle">Go</text>
+
+  <!-- TO DO COLUMN -->
+  <rect x="32" y="216" width="363" height="582" rx="12" fill="#FFFFFF"/>
+  <text x="52" y="252" font-size="16" font-weight="600" fill="#172033">To Do</text>
+  <rect x="306" y="234" width="28" height="28" rx="14" fill="#EEF3FB"/>
+  <text x="320" y="253" font-size="12" font-weight="700" fill="#516076" text-anchor="middle">2</text>
+
+  <rect x="52" y="270" width="323" height="104" rx="8" fill="#E3E3E3"/>
+  <text x="68" y="296" font-size="13" font-weight="600" fill="#1a2233">Create login page</text>
+  <text x="68" y="314" font-size="11" fill="#607086">Auth screen, primary CTA, social sign-in row</text>
+  <rect x="68" y="326" width="42" height="22" rx="7" fill="#FFF2E6"/>
+  <text x="89" y="341" font-size="10" font-weight="700" fill="#BF6416" text-anchor="middle">High</text>
+  <rect x="344" y="278" width="20" height="20" rx="10" fill="#DC3545"/>
+  <text x="354" y="293" font-size="12" fill="#fff" text-anchor="middle">×</text>
+
+  <rect x="52" y="386" width="323" height="104" rx="8" fill="#E3E3E3"/>
+  <text x="68" y="412" font-size="13" font-weight="600" fill="#1a2233">Write onboarding copy</text>
+  <text x="68" y="430" font-size="11" fill="#607086">Short product value statement and helper text</text>
+  <rect x="68" y="442" width="56" height="22" rx="7" fill="#FFF1D6"/>
+  <text x="96" y="457" font-size="10" font-weight="700" fill="#AD7A10" text-anchor="middle">Medium</text>
+  <rect x="344" y="394" width="20" height="20" rx="10" fill="#DC3545"/>
+  <text x="354" y="409" font-size="12" fill="#fff" text-anchor="middle">×</text>
+
+  <!-- IN PROGRESS COLUMN -->
+  <rect x="419" y="216" width="363" height="582" rx="12" fill="#FFFFFF"/>
+  <text x="439" y="252" font-size="16" font-weight="600" fill="#172033">In Progress</text>
+  <rect x="693" y="234" width="28" height="28" rx="14" fill="#EEF3FB"/>
+  <text x="707" y="253" font-size="12" font-weight="700" fill="#516076" text-anchor="middle">2</text>
+
+  <rect x="439" y="270" width="323" height="104" rx="8" fill="#D0E0FF" stroke="#007BFF" stroke-width="2"/>
+  <text x="455" y="296" font-size="13" font-weight="600" fill="#1a2233">Design homepage</text>
+  <text x="455" y="314" font-size="11" fill="#607086">Hero block, board layout, mobile view</text>
+  <rect x="455" y="326" width="60" height="22" rx="7" fill="#FFF1D6"/>
+  <text x="485" y="341" font-size="10" font-weight="700" fill="#AD7A10" text-anchor="middle">Selected</text>
+  <rect x="731" y="278" width="20" height="20" rx="10" fill="#DC3545"/>
+  <text x="741" y="293" font-size="12" fill="#fff" text-anchor="middle">×</text>
+
+  <rect x="439" y="386" width="323" height="104" rx="8" fill="#E3E3E3"/>
+  <text x="455" y="412" font-size="13" font-weight="600" fill="#1a2233">Plan drag and drop states</text>
+  <text x="455" y="430" font-size="11" fill="#607086">Hover, selected, empty-col and drop indicators</text>
+  <rect x="455" y="442" width="46" height="22" rx="7" fill="#FFF1D6"/>
+  <text x="478" y="457" font-size="10" font-weight="700" fill="#AD7A10" text-anchor="middle">Ready</text>
+  <rect x="731" y="394" width="20" height="20" rx="10" fill="#DC3545"/>
+  <text x="741" y="409" font-size="12" fill="#fff" text-anchor="middle">×</text>
+
+  <!-- DONE COLUMN -->
+  <rect x="806" y="216" width="363" height="582" rx="12" fill="#FFFFFF"/>
+  <text x="826" y="252" font-size="16" font-weight="600" fill="#172033">Done</text>
+  <rect x="1080" y="234" width="28" height="28" rx="14" fill="#EEF3FB"/>
+  <text x="1094" y="253" font-size="12" font-weight="700" fill="#516076" text-anchor="middle">1</text>
+
+  <rect x="826" y="270" width="323" height="104" rx="8" fill="#E3E3E3"/>
+  <text x="842" y="296" font-size="13" font-weight="600" fill="#1a2233">Deploy website</text>
+  <text x="842" y="314" font-size="11" fill="#607086">Production build, check auth and board</text>
+  <rect x="842" y="326" width="40" height="22" rx="7" fill="#EAF9F0"/>
+  <text x="862" y="341" font-size="10" font-weight="700" fill="#2E8B57" text-anchor="middle">Done</text>
+  <rect x="1118" y="278" width="20" height="20" rx="10" fill="#DC3545"/>
+  <text x="1128" y="293" font-size="12" fill="#fff" text-anchor="middle">×</text>
+</svg>
