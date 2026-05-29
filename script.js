@@ -3,9 +3,10 @@ const progress = document.getElementById("progress")
 const done = document.getElementById("done")
 let draggedCard = null
 
-function createTask({title, description = '', badge = '', badgeType = ''}, column) {
+function createTask({title, description = '', badge = '', badgeType = '', selected = false}, column) {
   const card = document.createElement("div")
   card.classList.add("card")
+  if (selected) card.classList.add("selected")
   card.draggable = true
 
   const titleEl = document.createElement('div')
@@ -49,12 +50,6 @@ function createTask({title, description = '', badge = '', badgeType = ''}, colum
   updateCounts()
   return card
 }
-
-// initial sample tasks to match Figma layout
-createTask("Create login & register UI", todo)
-createTask("Add task input and controls", todo)
-createTask("Design homepage", progress)
-createTask("Deploy site", done)
 
 document.querySelectorAll(".column").forEach(column => {
   column.addEventListener("dragover", e => e.preventDefault())
@@ -107,9 +102,9 @@ document.getElementById("changeStatusBtn").onclick = () => {
     card.classList.remove("selected")
     targetColumn.appendChild(card)
   })
+  updateCounts()
 }
 
-// small accessibility: allow selecting with keyboard (space)
 document.addEventListener('keydown', (e)=>{
   if(e.key === ' ' || e.key === 'Spacebar'){
     const active = document.activeElement
@@ -132,12 +127,11 @@ function updateCounts(){
   })
 }
 
-// create richer sample tasks to match Figma
-document.querySelectorAll('.column').forEach(c=>c.innerHTML = c.querySelector('.col-head').outerHTML)
+// sample tasks matching Figma design
 createTask({title: 'Create login page', description: 'Auth screen, primary CTA, social sign-in row', badge: 'High', badgeType: 'high'}, todo)
 createTask({title: 'Write onboarding copy', description: 'Short product value statement and helper text', badge: 'Medium', badgeType: 'medium'}, todo)
-createTask({title: 'Design homepage', description: 'Hero block, board layout, mobile view', badge: 'Selected', badgeType: 'medium'}, progress)
-createTask({title: 'Plan drag and drop states', description: 'Hover, selected, empty-column and drop indicators', badge: 'Ready', badgeType: 'medium'}, progress)
+createTask({title: 'Design homepage', description: 'Hero block, board layout, mobile view', badge: 'Selected', badgeType: 'medium', selected: true}, progress)
+createTask({title: 'Plan drag and drop states', description: 'Hover, selected, empty-col and drop indicators', badge: 'Ready', badgeType: 'medium'}, progress)
 createTask({title: 'Deploy website', description: 'Production build, check auth CTA and board interactions', badge: 'Done', badgeType: 'done'}, done)
 
 updateCounts()
